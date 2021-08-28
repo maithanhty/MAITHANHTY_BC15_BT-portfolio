@@ -1,0 +1,470 @@
+/* https://cyber-my-portfolio.vercel.app/?fbclid=IwAR2MOWhZgcCqtlUX9nLgI5KvthIBau7ep_xo91o7Dvq-ynI0xB528mRFmc0 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+}
+
+/* header  */
+
+header .navbar-brand span{
+    font-size: 2.5rem;
+}
+header {
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+header .navbar-brand i{
+    color: #35a22c;
+}
+
+header .navbar-nav .nav-item{
+    margin: 0 10px;
+}
+
+header .navbar-nav .nav-link{
+    color: white;
+    font-size: 1.2rem;
+}
+
+header .navbar-nav .nav-item.active .nav-link{
+    color: #35a22c;
+}
+
+header .navbar-nav .nav-item a{
+    font-weight: 700;
+}
+
+header .navbar-nav .nav-item::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: green;
+    display: block;
+    transition: all 0.5s;
+}
+
+header .navbar-nav .nav-item.active::after{
+    width: 100%;
+}
+
+header .navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    header .navbar-brand span{
+        font-size: 1rem;
+    }
+    header .navbar-brand i{
+      font-size: 2rem;
+    }
+  }
+
+  /* carousel  */
+  #carousel .carousel-item{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+  }
+  #carousel .carousel-item:nth-child(1){
+    background-image: url(./../image/finland.jpg);
+  }
+
+  #carousel .carousel-item:nth-child(2){
+    background-image: url(./../image/mountains-1.jpg);
+}
+
+#carousel .carousel-item:nth-child(3){
+    background-image: url(./../image/mountains.jpg);
+}
+
+
+#carousel .carousel__thumb{
+    width: 150px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    margin:auto;
+}
+
+#carousel .carousel__thumb img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #8080806e;
+}
+
+#carousel .carousel__content h1{
+font-size: 4rem;
+}
+
+#carousel .carousel__content p{
+    font-size: 2rem;
+}
+#carousel  .carousel__content{
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%)
+    
+    
+}
+
+.carousel-indicators li{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    border:none;
+}
+.carousel-indicators li.active{
+    background-color: green;
+}
+
+/* welcome */
+#welcome{
+    
+}
+
+#welcome .overlay{
+    
+    background-image: url(../image/memphis_2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    width: 100%;
+    padding: 140px 0;
+    position: relative;
+}
+
+#welcome .overlay::after{
+    content: "";
+    background-color: #ffffff26;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome__heading h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.welcome__heading p{
+    font-size: 16px;
+    padding: 20px 180px;
+}
+
+.progress{
+    height: 0.3rem;
+}
+
+
+.aos-animate .progress-bar{
+    background: linear-gradient(to right,#35a22c,#0ea8cf) ;
+    animation-name: progress;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes progress{
+    from{
+        width:0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* feature */
+#feature {
+    
+    background-image: url(../image/3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    color: white;
+   height: 800px;
+    position: relative;
+}
+#feature .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000091;
+    width: 100%;
+    height: 100%;
+    
+   
+}
+
+.feature__nd{
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.feature__heading h1{
+    z-index: 1 ;
+    font-weight: 700;
+}
+
+.feature__heading p{
+    font-size: 16px;
+    padding: 16px 196px;
+}
+
+#feature .feature__item{
+    background-color: #ffffff26;
+    text-align: center;
+    border-radius: 8px;
+    padding: 40px;
+}
+#feature .feature__item i{
+    color: #35a22c;
+    font-size: 40px;
+}
+
+#feature .feature__item h4{
+    font-weight: 700;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+#feature .feature__item p{
+    font-size: 16px;
+    padding: 16px 1px;
+
+}
+
+#feature .feature__item:hover{
+    background-color: black;
+    border: 1px solid white;
+    height: 100%;
+}
+
+/* project  */
+#project {
+    padding: 120px 0;
+}
+#project .project__heading h1{
+    font-size: 36px;
+    font-weight: 700;
+
+}
+
+#project .project__heading p{
+    font-size: 16px;
+    padding:0 180px;
+    margin: 0;
+}
+
+#project .project__content ul{
+    padding: 50px 27%;
+}
+
+#project .project__content ul li{
+    margin-right: 20px;
+}
+#project .project__content ul li .nav-link{
+    color: black;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#project .project__content ul li .nav-link.active{
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+#project  .tab-pane .card{
+    margin-top: 22px;
+    border-radius: 15px;
+    transition: all 0.8s;
+}
+.tab-pane .card img{
+    border-top-left-radius:15px ;
+    border-top-right-radius:15px ;
+}
+
+#project .tab-pane .card:hover .card-body{
+    border: 1px solid #35a22c;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+#project .tab-pane .card:hover .card-body h4{
+    color: #35a22c;
+}
+
+
+#project .tab__content .tab-pane.active .card{
+        animation-name: zoomin;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+}
+
+@keyframes zoomin {
+0%{
+    opacity: 0;
+    transform: scale(0.5);
+}
+50%{
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+    
+}
+
+/* education  */
+.education{
+    background: #272b36 url(../image/memphis_2.png);
+    background-size: cover;
+    background-position: top right;
+    padding: 48px 0;
+}
+
+.education__content{
+    padding: 45px;
+    background: #ffffff54;
+    border-radius: 15px;
+}
+
+.education__content h3{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 48px;
+
+}
+
+.education__content .education__item h5{
+    padding: 6px 10px 5px 10px;
+    border: 2px solid #35a22c;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+}
+.education__content .education__item h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.education__content .education__item p{
+    font-size: 16px;
+    margin: 16px 0;
+    color:#ffffffa6;
+}
+
+/* award  */
+.award{
+    position: relative;
+    padding: 70px 0;
+}
+
+.award .award__background{
+    background-image: url(../image/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.award__left{
+    background: rgba(255,255,255,.25);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.18);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    padding: 45px;
+}
+
+.award__left h2{
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 600;
+}
+.award__left p{
+    font-size: 16px;
+    color: #585858;
+}
+
+.award__right{
+    padding: 45px 0;
+    width: 600px;
+}
+
+.award__right p{
+font-size: 16px;
+color:#585858 ;
+}
+
+.award__right .col{
+    display: flex;
+    padding:0;
+}
+.award__right .col img{
+    width: 22%;
+}
+
+footer{
+    background: #222;
+    padding: 48px 0;
+}
+
+footer .footer__main i{
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    color: #aaa;
+    margin: 0 5px;
+    transition: all 0.5s;
+}
+footer .footer__main i:hover{
+color: #35a22c;
+border: 1px solid #35a22c;
+}
+
+footer .footer__copies{
+    border-top: 1px solid #454545;
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+footer .footer__copies p{
+    color: #aaa;
+    font-size: 16px;
+}
+
+footer .footer__copies p a{
+    color: #aaa;
+    text-decoration: none;
+}
+footer .footer__copies p a:hover{
+    color: #35a22c;
+}
